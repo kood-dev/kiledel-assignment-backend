@@ -7,31 +7,28 @@ import java.time.LocalDateTime;
 
 @Getter
 public class Course {
-    private static Integer DEFAULT_SEAT_COUNT = 100;
+    public static final Integer DEFAULT_SEAT_COUNT = 100;
 
     private CourseId courseId;
     private String title;
     private String contents;
-    private CourseStatus state;
     private LocalDateTime startAt;
     private LocalDateTime endAt;
-    private String presenterName;
+    private String speaker;
 
     private CoursePlace place;
 
     @Builder
-    public Course(CourseId courseId, String title, String contents, CourseStatus state, LocalDateTime startAt, LocalDateTime endAt, String presenterName, String placeName) {
+    public Course(CourseId courseId, String title, String contents,
+                  LocalDateTime startAt, LocalDateTime endAt, String speaker, String placeName, int totalSeats) {
         this.courseId = courseId;
         this.title = title;
         this.contents = contents;
-        this.state = state;
         this.startAt = startAt;
         this.endAt = endAt;
-        this.presenterName = presenterName;
-        this.place = CoursePlace.builder()
-                .name(placeName)
-                .totalSeats(DEFAULT_SEAT_COUNT)
-                .build();
+        this.speaker = speaker;
+        this.place = new CoursePlace(placeName, totalSeats);
+
     }
 
     public boolean isCreated() {

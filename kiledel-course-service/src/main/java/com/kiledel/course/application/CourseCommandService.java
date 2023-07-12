@@ -1,7 +1,7 @@
 package com.kiledel.course.application;
 
 
-import com.kiledel.annotation.UseCase;
+import com.kiledel.common.annotation.UseCase;
 import com.kiledel.course.application.port.in.CreateCourseUseCase;
 import com.kiledel.course.application.port.in.CreateCourseCommand;
 import com.kiledel.course.application.port.out.CreateCoursePort;

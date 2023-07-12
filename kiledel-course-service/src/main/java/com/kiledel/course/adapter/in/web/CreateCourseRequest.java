@@ -9,19 +9,19 @@ import java.time.LocalDateTime;
 class CreateCourseRequest {
     private String title;
     private String contents;
-    private String state;
+    private String status;
     private LocalDateTime startAt;
     private LocalDateTime endAt;
-    private String presenterName;
+    private String speaker;
     private String placeName;
     public CreateCourseCommand toCommand() {
         return CreateCourseCommand.builder()
                 .title(title)
                 .contents(contents)
-                .state(state)
+                .status(status)
                 .startAt(startAt)
                 .endAt(endAt)
-                .presenterName(presenterName)
+                .speaker(speaker)
                 .placeName(placeName)
                 .build();
     }

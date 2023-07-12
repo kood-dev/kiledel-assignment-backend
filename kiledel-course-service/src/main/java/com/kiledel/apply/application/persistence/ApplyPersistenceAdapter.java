@@ -1,6 +1,6 @@
 package com.kiledel.apply.application.persistence;
 
-import com.kiledel.annotation.PersistenceAdapter;
+import com.kiledel.common.annotation.PersistenceAdapter;
 import com.kiledel.apply.application.port.out.ApplyQueryPort;
 import com.kiledel.apply.domain.Apply;
 import lombok.RequiredArgsConstructor;

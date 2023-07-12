@@ -5,9 +5,9 @@ Content-Type: application/json
 {
   "title": "test title",
   "contents": "test contents",
-  "state": "OPEN",
+  "status": "OPEN",
   "startAt": "2023-07-12T09:00:00",
   "endAt": "2023-07-12T12:00:00",
-  "presenterName": "gwKoo",
+  "speaker": "gwKoo",
   "placeId": "1"
 }
