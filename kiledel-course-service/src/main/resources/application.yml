@@ -1,0 +1,40 @@
+spring:
+  application:
+    name: kiledel-course-service
+  profiles:
+    active: standalone
+  jpa:
+    hibernate.ddl-auto: none
+    show_sql: false
+    properties:
+      hibernate:
+        default_batch_fetch_size: 100
+        format_sql: true
+        use_sql_comments: true
+    open-in-view: false
+
+logging:
+  level:
+    org.hibernate.SQL: debug
+    org.hibernate.type: trace
+    org.hibernate.orm.jdbc.bind: trace
+server:
+  port: 8081
+---
+spring:
+  config:
+    activate:
+      on-profile: standalone
+  h2:
+    console:
+      enabled: true
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:~/test;init=create schema if not exists gigdb
+    username: sa
+    password:
+  jpa:
+    hibernate.ddl-auto: create
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect

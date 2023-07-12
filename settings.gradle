@@ -1,0 +1,5 @@
+rootProject.name = 'kiledel-assignment-backend'
+
+include 'kiledel-course-service'
+include 'kiledel-course-backoffice-service'
+include 'kiledel-course-front-service'
