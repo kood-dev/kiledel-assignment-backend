@@ -1,4 +1,4 @@
-package com.kiledel.annotation;
+package com.kiledel.common.annotation;
 
 import org.springframework.core.annotation.AliasFor;
 import org.springframework.stereotype.Component;
