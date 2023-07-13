@@ -6,6 +6,6 @@ import com.kiledel.course.domain.Course;
 import java.util.List;
 
 public interface FindCoursesPort {
-    List<Course> findCourses(CourseFilter query);
+    List<Course> findCourses(CourseFilter filter);
 
 }

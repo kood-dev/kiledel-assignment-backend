@@ -14,9 +14,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class CourseQueryServiceTest {
     @Test
-    void 강연목록조회() {
+    void 전체강연_목록조회() {
         // given
-
         Course course = Course.builder()
                 .courseId(new CourseId(1L))
                 .title("강연1")
@@ -30,7 +29,7 @@ class CourseQueryServiceTest {
 
         CourseQueryService courseQueryService = new CourseQueryService(new FindCoursesPort() {
             @Override
-            public List<Course> findCourses(CourseFilter query) {
+            public List<Course> findCourses(CourseFilter filter) {
                 return List.of(course);
             }
         });
@@ -40,5 +39,10 @@ class CourseQueryServiceTest {
 
         // then
         assertEquals(1, courses.size());
+    }
+
+    @Test
+    void 강연조건별목록조회() {
+
     }
 }

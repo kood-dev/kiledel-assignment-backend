@@ -32,7 +32,8 @@ class CourseEntity {
     private Integer totalPlaceSeat;
 
     @Builder
-    public CourseEntity(Long courseId, String title, String contents, LocalDateTime startAt, LocalDateTime endAt, String speaker, String placeName, Integer totalPlaceSeat) {
+    public CourseEntity(Long courseId, String title, String contents, LocalDateTime startAt, LocalDateTime endAt,
+                        String speaker, String placeName, Integer totalPlaceSeat) {
         this.courseId = courseId;
         this.title = title;
         this.contents = contents;

@@ -11,7 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 @RequiredArgsConstructor
 @UseCase
-@Transactional
+@Transactional(rollbackFor = Exception.class)
 class CourseCommandService implements CreateCourseUseCase {
 
     private final CreateCoursePort createCoursePort;
