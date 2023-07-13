@@ -1,0 +1,24 @@
+ifndef::snippets[]
+:snippets: ./build/generated-snippets
+endif::[]
+
+= Courses
+
+== [small]#강연 등록#
+[red big]#Overview#
+----
+강연을 등록합니다.
+----
+
+[red big]#HTTP Request#
+include::{snippets}/courses/create/http-request.adoc[]
+
+[red big]#HTTP Response#
+include::{snippets}/courses/create/http-response.adoc[]
+
+[red big]#Request Body#
+include::{snippets}/courses/create/request-body.adoc[]
+
+[red big]#Response Body#
+include::{snippets}/courses/create/response-body.adoc[]
+
