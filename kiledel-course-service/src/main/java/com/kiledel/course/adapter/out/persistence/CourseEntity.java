@@ -20,6 +20,7 @@ class CourseEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long courseId;
     private String title;
+    @Column(length = 1000)
     private String contents;
 
     @Temporal(TemporalType.TIMESTAMP)

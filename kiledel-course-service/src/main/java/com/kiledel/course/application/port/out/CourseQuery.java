@@ -6,25 +6,10 @@ import lombok.Builder;
 
 import java.time.LocalDateTime;
 
-public class CourseQuery {
-    private CourseId courseId;
-    private String title;
-    private String contents;
-    private LocalDateTime startAt;
-    private LocalDateTime endAt;
-    private String speaker;
-
-    private CoursePlaceQuery place;
-
+public record CourseQuery(CourseId courseId, String title, String contents, LocalDateTime startAt, LocalDateTime endAt,
+                          String speaker, CoursePlaceQuery place) {
     @Builder
-    public CourseQuery(CourseId courseId, String title, String contents, LocalDateTime startAt, LocalDateTime endAt, String speaker, CoursePlaceQuery place) {
-        this.courseId = courseId;
-        this.title = title;
-        this.contents = contents;
-        this.startAt = startAt;
-        this.endAt = endAt;
-        this.speaker = speaker;
-        this.place = place;
+    public CourseQuery {
     }
 
     public static CourseQuery of(Course course) {

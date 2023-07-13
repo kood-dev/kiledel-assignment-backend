@@ -4,6 +4,6 @@ import com.kiledel.course.application.port.out.CourseQuery;
 
 import java.util.List;
 
-public interface FindCoursesUseCase {
+public interface GetCoursesUseCase {
     List<CourseQuery> findCourses(CourseFilter query);
 }

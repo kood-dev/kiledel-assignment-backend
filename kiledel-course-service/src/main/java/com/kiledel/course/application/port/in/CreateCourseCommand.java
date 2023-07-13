@@ -6,23 +6,23 @@ import lombok.Builder;
 import java.time.LocalDateTime;
 
 public class CreateCourseCommand {
-    private String title;
-    private String contents;
-    private String status;
-    private LocalDateTime startAt;
-    private LocalDateTime endAt;
-    private String speaker;
-    private String placeName;
+    private final String title;
+    private final String contents;
+    private final LocalDateTime startAt;
+    private final LocalDateTime endAt;
+    private final String speaker;
+    private final String placeName;
+    private final int totalSeats;
 
     @Builder
-    public CreateCourseCommand(String title, String contents, String status, LocalDateTime startAt, LocalDateTime endAt, String speaker, String placeName) {
+    public CreateCourseCommand(String title, String contents, LocalDateTime startAt, LocalDateTime endAt, String speaker, String placeName, int totalSeats) {
         this.title = title;
         this.contents = contents;
-        this.status = status;
         this.startAt = startAt;
         this.endAt = endAt;
         this.speaker = speaker;
         this.placeName = placeName;
+        this.totalSeats = totalSeats;
     }
 
     public Course of() {
@@ -33,17 +33,8 @@ public class CreateCourseCommand {
                 .endAt(endAt)
                 .speaker(speaker)
                 .placeName(placeName)
+                .totalSeats(totalSeats)
                 .build();
     }
 
-    /*class CreateCoursePlaceCommand {
-        String name;
-        int totalSeat;
-
-        public CreateCoursePlaceCommand(String name, int totalSeat) {
-            this.name = name;
-            this.totalSeat = totalSeat;
-        }
-    }
-*/
 }

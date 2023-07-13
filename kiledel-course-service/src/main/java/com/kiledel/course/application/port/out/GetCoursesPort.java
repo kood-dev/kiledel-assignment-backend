@@ -5,7 +5,6 @@ import com.kiledel.course.domain.Course;
 
 import java.util.List;
 
-public interface FindCoursesPort {
+public interface GetCoursesPort {
     List<Course> findCourses(CourseFilter filter);
-
 }
