@@ -16,6 +16,9 @@ public class BusinessException extends RuntimeException {
         this(exceptionType, exceptionType.getMessage());
     }
 
+    public static BusinessException of(ExceptionType exceptionType) {
+        return new BusinessException(exceptionType, exceptionType.getMessage());
+    }
     public static BusinessException of(ExceptionType exceptionType, String message) {
         return new BusinessException(exceptionType, message);
     }

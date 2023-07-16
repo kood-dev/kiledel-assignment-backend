@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 @RequiredArgsConstructor
 public enum ExceptionType {
     BAD_REQUEST("400401", HttpStatus.BAD_REQUEST.value(), "exception.standard.badRequest"),
+    DISABLED_REDISSON_LOCK("403401", HttpStatus.FORBIDDEN.value(), "exception.business.disabled.lock"),
     INVALID_REQUEST("400402", HttpStatus.BAD_REQUEST.value(), "exception.common.validation.request"),
     NOT_FOUND("404401", HttpStatus.NOT_FOUND.value(), "exception.standard.notFound"),
     NOT_FOUND_RESULT("404402", HttpStatus.NOT_FOUND.value(), "exception.business.notFound.result"),

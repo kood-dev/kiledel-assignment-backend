@@ -1,6 +1,6 @@
 package com.kiledel.apply.domain;
 
-public enum ApplyStatus {
+public enum ApplyState {
     APPLIED,
     CANCELED;
 }

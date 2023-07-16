@@ -25,7 +25,7 @@ public class CreateCourseCommand {
         this.totalSeats = totalSeats;
     }
 
-    public Course of() {
+    public Course toDomain() {
         return Course.builder()
                 .title(title)
                 .contents(contents)

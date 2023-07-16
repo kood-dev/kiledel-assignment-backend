@@ -40,4 +40,5 @@ class CourseCommandServiceTest {
 
         assertThat(courses.getCourseId().value()).isEqualTo(courseId.value());
     }
+
 }

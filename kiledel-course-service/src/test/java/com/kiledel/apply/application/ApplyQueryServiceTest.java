@@ -2,7 +2,7 @@ package com.kiledel.apply.application;
 
 import com.kiledel.apply.application.port.ApplyQuery;
 import com.kiledel.apply.domain.Apply;
-import com.kiledel.apply.domain.ApplyStatus;
+import com.kiledel.apply.domain.ApplyState;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -17,7 +17,7 @@ public class ApplyQueryServiceTest {
 
         Apply apply = Apply.builder()
                 .employeeNo(employeeNo)
-                .status(ApplyStatus.APPLIED)
+                .state(ApplyState.APPLIED)
                 .build();
         List<Apply> applies = List.of(apply);
 
